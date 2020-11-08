@@ -1,22 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { AppContainer} from 'react-hot-loader'
+import { AppContainer } from 'react-hot-loader'
 import App from './App.jsx'
 
 // ReactDOM.hydrate(<App/>, document.getElementById('root'))
 const root = document.getElementById('root')
-const render = Component => {
+const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Component/>
+      <Component />
     </AppContainer>,
-    root
+    root,
   )
 }
 render(App)
-if(module.hot){
-  module.hot.accept('./App.jsx',()=>{
-    const NextApp = require('./App.jsx').default
-   render(NextApp)
+if (module.hot) {
+  module.hot.accept('./App.jsx', () => {
+    const NextApp = require('./App.jsx').default // eslint-disable-line
+    render(NextApp)
   })
 }

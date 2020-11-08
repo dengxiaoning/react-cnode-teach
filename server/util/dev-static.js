@@ -49,7 +49,7 @@ serverCompiler.watch({},(err,status)=>{
     /**
      * fs： 从硬盘读写文件
      * memory-fs： 在内存中操作文件
-     * 
+     *
      * 由于 readFileSync读取的文件是一个字符串
      * 而我们需要的是一个node的模块
      * 这里使用到module 的constructor构造
